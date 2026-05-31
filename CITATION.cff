@@ -1,0 +1,39 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the REAL paper."
+title: "REAL: Reading Out Transformer Activations for Precise Localization in Language Model Steering"
+type: software
+authors:
+  - family-names: Zhan
+    given-names: Li-Ming
+  - family-names: Liu
+    given-names: Bo
+  - family-names: Feng
+    given-names: Yujie
+  - family-names: Xie
+    given-names: Chengqiang
+  - family-names: Cao
+    given-names: Jiannong
+  - family-names: Wu
+    given-names: Xiao-Ming
+date-released: "2026-05-31"
+url: "https://openreview.net/forum?id=P38RYdkFLI"
+preferred-citation:
+  type: conference-paper
+  title: "REAL: Reading Out Transformer Activations for Precise Localization in Language Model Steering"
+  authors:
+    - family-names: Zhan
+      given-names: Li-Ming
+    - family-names: Liu
+      given-names: Bo
+    - family-names: Feng
+      given-names: Yujie
+    - family-names: Xie
+      given-names: Chengqiang
+    - family-names: Cao
+      given-names: Jiannong
+    - family-names: Wu
+      given-names: Xiao-Ming
+  conference:
+    name: "The Fourteenth International Conference on Learning Representations"
+  year: 2026
+  url: "https://openreview.net/forum?id=P38RYdkFLI"
