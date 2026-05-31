@@ -24,6 +24,11 @@ The main reproduction path is:
 4. Train REAL head rankings with `validation/OneForAll.py`.
 5. Evaluate TruthfulQA with `validation/validate_2fold.py --method REAL`.
 
+For the bundled camera-ready setting, step 4 can be skipped: this repository
+already includes the REAL head-ranking files under
+`validation/results_dump/head_sorted/`. After extracting the required features
+for a bundled model name, you can run validation directly with those rankings.
+
 The repository includes:
 
 - TruthfulQA package/data under `TruthfulQA/`.
@@ -182,9 +187,23 @@ validation/results_dump/head_sorted/
 ```
 
 If you only want to validate the camera-ready rankings included in this release,
-you may skip this step for the bundled model names.
+you may skip this step for the bundled model names. `validate_2fold.py` will load
+the matching fold-specific files from `validation/results_dump/head_sorted/` using
+the pattern:
+
+```text
+Model_{your_model_name}_fold_{fold}_seed_42_top_heads_layer_total_codebook_32_units_8_pratio_0.0_*.npy
+```
+
+For other models or different REAL hyperparameters, run `OneForAll.py` first to
+create the corresponding `head_sorted` files.
 
 ## 5. Evaluate REAL On TruthfulQA
+
+The quickest camera-ready reproduction path is to use the included
+`head_sorted` files directly. You still need the model weights and the extracted
+TruthfulQA feature banks from step 3; the precomputed `head_sorted` files replace
+only the REAL head-ranking training step.
 
 Run from `/workspace/app/validation`:
 
